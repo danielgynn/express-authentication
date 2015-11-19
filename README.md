@@ -6,6 +6,7 @@ Simple authentication app using express, node & passport.
 
 * [Git](http://git-scm.com/)
 * [Node.js with npm](https://nodejs.org/en/)
+* [MongoDB](https://docs.mongodb.org/manual/installation/)
 
 ## Installation
 
