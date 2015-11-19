@@ -13,6 +13,13 @@
         <h1>Profile</h1>
         <strong>id</strong>: <%= user._id %><br>
         <strong>email</strong>: <%= user.local.email %><br>
+
+        <hr>
+
+        <h2>Facebook</h2>
+        <strong>id</strong>: <%= user.facebook.id %><br>
+        <strong>email</strong>: <%= user.facebook.email %><br>
+        <strong>name</strong>: <%= user.facebook.name %>
       </div>
       <hr>
       <span class="fa fa-sign-out"><a href="/login"> Sign out</a></span>
