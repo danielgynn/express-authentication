@@ -42,6 +42,13 @@ router.get('/auth/facebook/callback', passport.authenticate('facebook', {
   failureRedirect: '/',
 }));
 
+router.get('/auth/twitter', passport.authenticate('twitter'));
+
+router.get('/auth/twitter/callback', passport.authenticate('twitter', {
+  successRedirect: '/profile',
+  failureRedirect: '/',
+}));
+
 module.exports = router;
 
 function isLoggedIn(req, res, next) {
