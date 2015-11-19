@@ -1,5 +1,5 @@
 var express = require('express');
-var passpor = require('passport');
+var passport = require('passport');
 var router = express.Router();
 
 router.get('/', function(req, res, next) {
@@ -22,6 +22,18 @@ router.get('/logout', function(req, res) {
   req.logout();
   res.redirect('/');
 });
+
+router.post('/signup', passport.authenticate('local-signup', {
+  successRedirect: '/profile',
+  failureRedirect: '/signup',
+  failureFlash: true,
+}));
+
+router.post('/login', passport.authenticate('local-login', {
+  successRedirect: '/profile',
+  failureRedirect: '/login',
+  failureFlash: true,
+}));
 
 module.exports = router;
 
