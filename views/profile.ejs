@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+    <style>
+        body { padding-top:80px; }
+    </style>
+  <head>
+  <body>
+    <div class="col-sm-6 col-sm-offset-3">
+      <div class="jumbotron text-center">
+        <h1>Profile</h1>
+        <strong>id</strong>: <%= user._id %><br>
+        <strong>email</strong>: <%= user.local.email %><br>
+      </div>
+      <hr>
+      <span class="fa fa-sign-out"><a href="/login"> Sign out</a></span>
+    </div>
+  </body>
+</html>
