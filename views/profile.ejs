@@ -1,34 +1,36 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
-    <style>
-        body { padding-top:80px; }
-    </style>
-  <head>
+<% include partials/head %>
+
   <body>
-    <div class="col-sm-6 col-sm-offset-3">
-      <div class="jumbotron text-center">
+    <div class="col-sm-8 col-sm-offset-2">
+      <div class="text-center">
         <h1>Profile</h1>
-        <strong>id</strong>: <%= user._id %><br>
-        <strong>email</strong>: <%= user.local.email %><br>
-
+        <span><strong>user id</strong>: <%= user._id ? user._id : '' %></span><br>
+        <span class="fa fa-sign-out"><a href="/"> Sign out</a></span>
         <hr>
+        <div class="jumbotron">
+          <% if (user.local.email != null) { %>
+            <img src="https://avatars.io/gravatar/<%= user.local.email %>/140" class="img-circle"><br>
+            <strong>email</strong>: <%= user.local.email %><br>
+          <% } %>
 
-        <h2>Facebook</h2>
-        <strong>id</strong>: <%= user.facebook.id %><br>
-        <strong>email</strong>: <%= user.facebook.email %><br>
-        <strong>name</strong>: <%= user.facebook.name %>
+          <% if (user.facebook.id != null) { %>
+            <h2 class="fa fa-facebook"> Facebook</h2><br>
+            <img src="https://avatars.io/gravatar/<%= user.facebook.email %>/140" class="img-circle"><br>
+            <strong>id</strong>: <%= user.facebook.id %><br>
+            <strong>email</strong>: <%= user.facebook.email %><br>
+            <strong>name</strong>: <%= user.facebook.name %>
+          <% } %>
 
-        <h2>Twitter</h2>
-        <strong>id</strong>: <%= user.twitter.id %><br>
-        <strong>token</strong>: <%= user.twitter.token %><br>
-        <strong>username</strong>: <%= user.twitter.username %><br>
-        <strong>displayName</strong>: <%= user.twitter.displayName %>
+          <% if (user.twitter.id != null) { %>
+            <h2 class="fa fa-twitter"> Twitter</h2><br>
+            <img src="https://avatars.io/twitter/<%= user.twitter.username %>" class="img-circle"><br>
+            <strong>id</strong>: <%= user.twitter.id %><br>
+            <strong>token</strong>: <%= user.twitter.token %><br>
+            <strong>username</strong>: <%= user.twitter.username %><br>
+            <strong>displayName</strong>: <%= user.twitter.displayName %>
+          <% } %>
+        </div>
       </div>
-      <hr>
-      <span class="fa fa-sign-out"><a href="/"> Sign out</a></span>
     </div>
   </body>
 </html>
