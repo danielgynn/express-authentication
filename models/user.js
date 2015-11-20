@@ -20,6 +20,12 @@ var userSchema = mongoose.Schema({
     displayName: String,
     username: String,
   },
+  google: {
+    id: String,
+    token: String,
+    email: String,
+    name: String,
+  },
 });
 
 userSchema.methods.generateHash = function(password) {

@@ -49,6 +49,13 @@ router.get('/auth/twitter/callback', passport.authenticate('twitter', {
   failureRedirect: '/',
 }));
 
+router.get('/auth/google', passport.authenticate('google', { scope: ['profile', 'email'] }));
+
+router.get('/auth/google/callback', passport.authenticate('google', {
+  successRedirect: '/profile',
+  failureRedirect: '/',
+}));
+
 module.exports = router;
 
 function isLoggedIn(req, res, next) {
