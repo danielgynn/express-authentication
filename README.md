@@ -13,6 +13,7 @@ Simple authentication app using express, node & passport.
 * ` git clone https://github.com/danielgynn/express-authentication.git`
 * `cd express-authentication`
 * `npm install`
+* You will need a Mongo instance running. In a new terminal window run `mongod`
 * `node app`
 
-Head over to http://localhost:3000
+Head over to [http://localhost:3000](http://localhost:3000)
