@@ -4,6 +4,11 @@
     <div class="col-sm-8 col-sm-offset-2">
       <div class="jumbotron text-center">
         <h1><span class="fa fa-sign-in"></span> Login</h1>
+
+        <% if (message != null) { %>
+        	<div class="alert-danger"><%= message %></div>
+        <% } %>
+
         <form action="/login" method="post">
           <div class="form-group">
               <label>Email</label>
