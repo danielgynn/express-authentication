@@ -13,7 +13,6 @@ var LocalStrategy = require('passport-local').Strategy;
 var mongoose = require('mongoose');
 var flash = require('connect-flash');
 var session = require('express-session');
-var morgan = require('morgan');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
