@@ -12,6 +12,32 @@
             <img src="https://avatars.io/gravatar/<%= user.local.email %>/140" class="img-circle"><br>
             <strong>email</strong>: <%= user.local.email %><br>
           <% } %>
+
+          <% if (user.facebook.id != null) { %>
+            <h2 class="fa fa-facebook"> Facebook</h2><br>
+            <img src="https://avatars.io/gravatar/<%= user.facebook.email %>/140" class="img-circle"><br>
+            <strong>id</strong>: <%= user.facebook.id %><br>
+            <strong>email</strong>: <%= user.facebook.email %><br>
+            <strong>name</strong>: <%= user.facebook.name %>
+          <% } %>
+
+          <% if (user.twitter.id != null) { %>
+            <h2 class="fa fa-twitter"> Twitter</h2><br>
+            <img src="https://avatars.io/twitter/<%= user.twitter.username %>" class="img-circle"><br>
+            <strong>id</strong>: <%= user.twitter.id %><br>
+            <strong>token</strong>: <%= user.twitter.token %><br>
+            <strong>username</strong>: <%= user.twitter.username %><br>
+            <strong>displayName</strong>: <%= user.twitter.displayName %>
+          <% } %>
+
+          <% if (user.google.id != null) { %>
+            <h2 class="fa fa-google-plus"> Google</h2><br>
+            <img src="https://avatars.io/gravatar/<%= user.google.email %>/140" class="img-circle"><br>
+            <strong>id</strong>: <%= user.google.id %><br>
+            <strong>token</strong>: <%= user.google.token %><br>
+            <strong>email</strong>: <%= user.google.email %><br>
+            <strong>name</strong>: <%= user.google.name %>
+          <% } %>
         </div>
       </div>
     </div>
