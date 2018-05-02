@@ -5,7 +5,7 @@
       <div class="text-center">
         <h1 class=" fa fa-user"> Profile</h1><br>
         <span><strong>user id</strong>: <%= user._id ? user._id : '' %></span><br>
-        <span class="fa fa-sign-out"><a href="/"> Sign out</a></span>
+        <span class="fa fa-sign-out"><a href="/logout"> Sign out</a></span>
         <hr>
         <div class="jumbotron">
           <% if (user.local.email != null) { %>
